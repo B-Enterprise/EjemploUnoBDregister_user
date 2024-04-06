@@ -39,7 +39,7 @@
         
         
  
-      <table class="table table-striped table-dark " id= "table_id">
+      <table class="table table-striped table-dark" id="table_id">
 
                    
                          <thead>    
@@ -49,7 +49,6 @@
                         <th>Password</th>
                         <th>Telefono</th>
                         <th>Fecha_Registro</th>
-                        <th>Rol de usuario</th>
                         <th>Acciones</th>
          
                         </tr>
@@ -57,6 +56,41 @@
                         <tbody>
 
 				<?php
+        #Otra forma de mostrar los datos en la tabla
+        #Asignar la conexión
+        $conexion = mysqli_connect("localhost", "root", "", "r_user");
+        $SQL = "SELECT * FROM user";
+        $dato = mysqli_query($conexion, $SQL);
+
+        if ($dato -> num_rows > 0) {
+          while ($fila = mysqli_fetch_array($dato)) {
+        ?>
+        
+        <tr>
+          <!-- Mostrar los datos -->
+
+          <td><?php echo $fila['nombre']; ?></td>
+          <td><?php echo $fila['correo']; ?></td>
+          <td><?php echo $fila['password']; ?></td>
+          <td><?php echo $fila['telefono']; ?></td>
+          <td><?php echo $fila['fecha']; ?></td>
+
+          <!-- Botones para las acciones -->
+          <td>
+            <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id']; ?>">Editar</a>
+            <a class="btn btn-danger" href="#?id='<?php echo $fila['id']; ?>">Eliminar</a>
+          </td>
+        </tr>
+
+        <?php
+          }
+        } else {
+          ?>
+            <tr class="text-center">
+              <td colspan="16">No existen registros</td>
+            </tr>
+          <?php
+        }
 
         ?>
 
