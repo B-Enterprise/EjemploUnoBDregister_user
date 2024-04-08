@@ -20,7 +20,7 @@
                             <input type="hidden" name="accion" value="eliminar_registro"> <!-- Acción -->
                             <input type="hidden" name="id" value="<?php echo $_GET['id']; ?>"> <!-- GET sirve para traer el id del usuario -->
                             <input type="submit" value="Eliminar" class="btn btn-danger btn-block">
-                            <a href="user.php"></a>
+                            <a href="user.php" class="btn btn-success">Cancelar</a>
                         </form>
                     </div>
                 </div>

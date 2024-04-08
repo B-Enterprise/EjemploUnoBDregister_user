@@ -78,7 +78,7 @@
           <!-- Botones para las acciones -->
           <td>
             <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id']; ?>">Editar</a>
-            <a class="btn btn-danger" href="eliminar_user.php?id='<?php echo $fila['id']; ?>">Eliminar</a>
+            <a class="btn btn-danger" href="eliminar_user.php?id=<?php echo $fila['id']; ?>">Eliminar</a>
           </td>
         </tr>
 
