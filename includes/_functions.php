@@ -14,7 +14,7 @@ if (isset($_POST['accion'])){
 
             case 'eliminar_registro';
             eliminar_registro();
-    
+
             break;
 
             case 'acceso_user';
@@ -36,5 +36,16 @@ if (isset($_POST['accion'])){
 
 
 		header('Location: ../views/user.php');
+    }
 
-}
+    function eliminar_registro() {
+		$conexion=mysqli_connect("localhost","root","","r_user");
+		extract($_POST);
+        $id = $_POST['id'];
+		$consulta = "DELETE FROM user WHERE id = $id ";
+
+		mysqli_query($conexion, $consulta);
+
+
+		header('Location: ../views/user.php');
+    }

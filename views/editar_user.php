@@ -20,6 +20,7 @@ $usuario = mysqli_fetch_assoc($resultado);
 
     <link rel="stylesheet" href="../css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
 
 <body id="page-top">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
     
@@ -12,7 +11,7 @@
 
     <link rel="stylesheet" href="../css/fontawesome-all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <title></title>
+    <title>Administración de registros</title>
 </head>
 
 <div class="container is-fluid">
@@ -24,7 +23,8 @@
 		<h1>Lista de usuarios</h1>
     <br>
 		<div>
-			<a class="btn btn-success" href="../includes/_sesion/registros.php">Nuevo usuario 
+      <!-- Llamamos a index.php para crear un nuevo usuario -->
+			<a class="btn btn-success" href="../index.php">Nuevo usuario 
        </a>
 		</div>
 		<br>
@@ -78,7 +78,7 @@
           <!-- Botones para las acciones -->
           <td>
             <a class="btn btn-warning" href="editar_user.php?id=<?php echo $fila['id']; ?>">Editar</a>
-            <a class="btn btn-danger" href="#?id='<?php echo $fila['id']; ?>">Eliminar</a>
+            <a class="btn btn-danger" href="eliminar_user.php?id='<?php echo $fila['id']; ?>">Eliminar</a>
           </td>
         </tr>
 
